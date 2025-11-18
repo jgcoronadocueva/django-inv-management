@@ -1,0 +1,59 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# PyInstaller
+# These files are usually written by a python script from a template
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.coverage
+.tox/
+.pytest_cache/
+htmlcov/
+
+# Virtual environment
+venv/
+env/
+.venv/
+.env/
+
+# Editor/IDE files
+.idea/  # PyCharm
+.vscode/ # VS Code
+*.swp   # Vim swap files
+*~      # Emacs backup files
+.DS_Store # macOS
+
+
+# Temporary files
+*.tmp
+*.log
+
+# Sensitive information (e.g., environment variables)
+.env
