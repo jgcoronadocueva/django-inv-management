@@ -36,7 +36,7 @@ def purchase_summary_by_supplier(connection):
     Parameters
     ----------
     connection : sqlite3.Connection
-        Active database connection.
+        The active database connection.
 
     Returns
     -------

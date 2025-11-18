@@ -73,8 +73,8 @@ def list_products_option(connection):
         print(p)
 
 def delete_product_option(connection):
-    print("Deleting product ID 2...")
-    msg = delete_product(connection, 2)
+    print("Deleting product ID 1...")
+    msg = delete_product(connection, 1)
     print(msg)
 
 def update_product_price_option(connection):

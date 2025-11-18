@@ -26,11 +26,12 @@ def process_order(connection, order_type, items, customer_id=None, supplier_id=N
         The ID of the newly created order.
     """
     now = datetime.now()
+    current_date = now.date()
     # Insert order
     execute_query(connection, """
         INSERT INTO orders (order_date, customer_id, supplier_id, status, order_type)
         VALUES (?, ?, ?, ?, ?)
-    """, (now, customer_id, supplier_id, "Completed", order_type))
+    """, (current_date, customer_id, supplier_id, "Completed", order_type))
     order_id = execute_read_query(connection, "SELECT last_insert_rowid()")[0][0]
 
     # Insert order details and update stock
