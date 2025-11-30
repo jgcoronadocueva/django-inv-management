@@ -1,45 +1,54 @@
 # Overview
 
-This inventory management system is designed to help manage products, suppliers, customers, stock, orders, and transactions. My goal creating this program is sharpen my skills writing SQL queries including joins and using aggregate functions.
+This Inventory Management System web application, built with Django, serves as a practical exercise in full-stack development. The project focuses on designing data models, managing relational data, implementing reusable service layers, and creating dynamic templates. Through this application, my goal was to learn how to use Django framework  to improve my skills in web development and Python programming while applying clean code principles such as clear separation of models, services, views, and routing. This tool efficiently manages products, suppliers, and inventory levels, combining functionality with maintainable code structure.
 
-The program uses sqlite3 library in Python to perfom CRUD operations accross multiple related tables in an SQLite relational. The program is modular, with separate Python modules for managing products, suppliers, stock, orders, and transactions.
+To start the test server on your computer:
 
-To use the program, simply run the main.py script. The program demonstrates using an interactive menu:
+- Clone the repository and navigate to the program root folder.
+- Ensure dependencies are installed: pip install -r requirements.txt.
+- Run the Django development server: python manage.py runserver
+- Open a web browser and navigate to: http://127.0.0.1:8000/
 
-- Adding and modifying records from different tables
-- Creating and managing orders and transactions
-- Running queries to summarize data
-- Joining tables to retrieve combined information
+[Inventory Management System with Django](http://youtube.link.goes.here)
 
-[Working with SQLite database in Python](https://youtu.be/aAGt33whKzI)
+# Web Pages
 
-# Relational Database
+- **Product List** – Displays all products with category, supplier, price and stock. Users can add, view, or adjust stock.
+- **Product Form** – Form-based page to create or modify products. Supplier options are dynamically included.  
+- **Product Detail** – Shows detailed information for a single product with an option to edit.
+- **Supplier List** – Displays all suppliers with contact information, with options to add or edit.  
+- **Supplier Form** – Form-based page to create or modify suppliers. 
+- **Stock Adjustment** – Allows updating the stock quantity of a product.  
+- **Inventory Management** - Allow moving between lists and details pages, and edit forms.
 
-The program uses SQLite as its relational database.
-
-- **Suppliers:** `supplier_id` (PK), `name`, `phone`, `email`, `address`  
-- **Products:** `product_id` (PK), `name`, `description`, `brand`, `category` (Pants/Shirts/Shoes), `base_price`, `supplier_id` (FK)
-- **Customers:** `customer_id` (PK), `name`, `phone`, `email`, `address`  
-- **Stock:** `stock_id` (PK), `quantity_available`, `last_updated`, `product_id` (FK)  
-- **Orders:** `order_id` (PK), `order_date`, `customer_id` (FK), `supplier_id` (FK), `status`, `order_type`
-- **Order Details:** `order_detail_id` (PK), `order_id` (FK), `product_id` (FK), `quantity_ordered`, `unit_price_at_time_of_order`  
-- **Transactions:** `transaction_id` (PK), `stock_id` (FK), `quantity_change`, `transaction_type`, `transaction_date`  
 
 # Development Environment
 
-Tools used to develop this program:
+Tools Used:
 
-- **Programming Language:** Python 3.14
-- **Libraries:** SQLite3
-- **IDE:** Visual Studio Code 
+- Visual Studio Code
+- Git
+- Django development server
+- SQLite
+
+Programming Language and Libraries:
+
+- Python 3.14.0
+- Django 5.2.8
+- HTML
+- CSS
 
 # Useful Websites
 
-- [Python SQL Libraries – Real Python](https://realpython.com/python-sql-libraries/)
-- [How to Work with SQLite in Python – freeCodeCamp](https://www.freecodecamp.org/news/work-with-sqlite-in-python-handbook/)
+* [Django Best Practices – Hostinger](https://www.hostinger.com/tutorials/django-best-practices)
+* [Building a Django CRUD Todo App – Dev.to](https://dev.to/aadarsh-nagrath/building-a-django-crud-todo-app-from-scratch-fe3)
+* [Django Tutorial – Hostinger](https://www.hostinger.com/tutorials/django-tutorial)
+* [Scaling Django with PostgreSQL – BetterStack](https://betterstack.com/community/guides/scaling-python/django-postgresql/)
+* [Django Intro – W3Schools](https://www.w3schools.com/django/django_intro.php)
+* [Get Started with Django – Real Python](https://realpython.com/get-started-with-django-1/)
 
 # Future Work
 
-- Improve error handling and validation for user input.
-- Implement a user-friendly GUI for easier interaction.
-- Include report generation with export options (CSV, PDF).
+* Add search, filtering, and sorting on the product and supplier lists.
+* Add functionality for sales tracking and managing customers.
+* Improve front-end styling and responsive design.
