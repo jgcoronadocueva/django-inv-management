@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inventory Management</title>
+
+    {# Global CSS file #}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <h1>Inventory App</h1>
+    <a href="/products/">Products</a> |
+    <a href="/suppliers/">Suppliers</a>
+    <hr>
+
+    {% block content %}{% endblock %}
+</body>
+</html>

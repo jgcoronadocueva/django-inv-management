@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Supplier Details{% endblock %}
+
+{% block content %}
+<h2>{{ supplier.name }}</h2>
+
+<ul>
+    <li><strong>Phone:</strong> {{ supplier.phone }}</li>
+    <li><strong>Email:</strong> {{ supplier.email }}</li>
+    <li><strong>Address:</strong> {{ supplier.address }}</li>
+</ul>
+
+<a href="{% url 'supplier_edit' supplier.id %}">Edit</a>
+{% endblock %}

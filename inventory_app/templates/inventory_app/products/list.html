@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Products{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/products.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Products</h2>
+
+<a href="{% url 'product_add' %}">Add Product</a>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Supplier</th>
+        <th>Price</th>
+        <th>Stock</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for product in products %}
+    <tr>
+        <td>{{ product.name }}</td>
+        <td>{{ product.category }}</td>
+        <td>{{ product.supplier.name }}</td>
+        <td>${{ product.base_price }}</td>
+        <td>{{ product.stock.quantity }}</td>
+        <td>
+            <a href="{% url 'product_detail' product.id %}">View Details</a> |
+            <a href="{% url 'stock_adjust' product.id %}">Adjust Stock</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}

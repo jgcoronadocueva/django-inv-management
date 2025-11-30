@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Suppliers{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'css/suppliers.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Suppliers</h2>
+
+<a href="{% url 'supplier_add' %}">Add Supplier</a>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+
+    {% for supplier in suppliers %}
+    <tr>
+        <td>{{ supplier.name }}</td>
+        <td>{{ supplier.phone }}</td>
+        <td>{{ supplier.email }}</td>
+        <td>
+            <a href="{% url 'supplier_edit' supplier.id %}">Edit</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
