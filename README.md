@@ -9,7 +9,7 @@ To start the test server on your computer:
 - Run the Django development server: python manage.py runserver
 - Open a web browser and navigate to: http://127.0.0.1:8000/
 
-[Inventory Management System with Django](http://youtube.link.goes.here)
+[Inventory Management System with Django](https://youtu.be/P7C9l9eC7WM)
 
 # Web Pages
 
